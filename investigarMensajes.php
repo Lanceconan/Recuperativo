@@ -17,12 +17,39 @@
                             $parametro = array();
                             $parametro['rut'] = $_POST['rut'];
                             $cliente = new SoapClient($wsdl);
-                            $resultado = $cliente->getAccesosPorRut($parametro);
+                            $resultado = $cliente->getMensajesPorRut($parametro);
 
-                            echo "<pre>";
-                            print_r($resultado);
-                            echo "</pre>";
+                          // echo "<pre>";
+                            //($resultado);
+                            //echo "</pre>"; 
                         ?>
+                       <?php                
+                if($resultado->estadoSalida->codigo==-1){
+                    ?>
+                    <div class="jumbotron">
+                        No existen Mensajes registrados con el Rut Ingresado o Rut Invalido.
+                    </div>
+                    <?php
+                }else{
+                    $largo = count($resultado->return);
+                    for($i=0;$i<$largo;$i++){
+                    ?>
+                    <div class="jumbotron">
+                        <div class="form-group">
+                            <label>Id</label>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->id ?>>
+                            <label>Rut</label>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->rut ?>>
+                            <label>Mensaje</label>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->mensaje." ".$resultado->return[$i]->accion?>>
+                            <label>Fecha</label>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->fecha ?>>
+                        </div>
+                    </div>
+                <?php
+                    }
+                }
+                ?>
                     </p>                    
                 </div>
             </div>
