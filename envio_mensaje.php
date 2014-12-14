@@ -9,22 +9,22 @@
                     <center>
                     <h1>Mensaje Enviado</h1>                     
                         <p>
-                        	<?php
-								require_once('lib/nusoap.php');
-								$wsdl = "http://sebastian.cl/isw-ws/wsISW?wsdl";
+                            <?php
+                                require_once('lib/nusoap.php');
+                                $wsdl = "http://sebastian.cl/isw-ws/wsISW?wsdl";
 
-								$parametros = array();
-								$parametros['rut'] = $_POST['rut'];
-								$parametros['mensaje'] = $_POST['message'];
-								$cliente = new SoapClient($wsdl);
-								$resultado = $cliente->guardarMensaje($parametros);
+                                $parametros = array();
+                                $parametros['rut'] = $_POST['rut'];
+                                $parametros['mensaje'] = $_POST['message'];
+                                $cliente = new SoapClient($wsdl);
+                                $resultado = $cliente->guardarMensaje($parametros);
 
-								$response = $resultado->return;
+                                $response = $resultado->return;
 
-								echo "<pre>";
-								print_r($response);
-								echo "</pre>";
-							?>
+                                echo "<pre>";
+                                print_r($response);
+                                echo "</pre>";
+                            ?>
                         </p>
                     </center>
                 </div>

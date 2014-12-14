@@ -15,9 +15,10 @@
                             $wsdl = "http://sebastian.cl/isw-ws/wsISW?wsdl";
 
                             $parametro = array();
-                            //$parametro['rut'] = $_POST['rut'];
+                            $parametro['rut'] = $_POST['rut'];
                             $cliente = new SoapClient($wsdl);
-                            $resultado = $cliente->getAccesos();
+                            $resultado = $cliente->getMensajePorRut($parametro);
+
                             /*
                             echo "<pre>";
                             print_r($resultado);
@@ -35,25 +36,20 @@
                     </div>
                     <?php
                 }else{
-                    $largo = count($resultado->return);
-                    for($i=0;$i<count($resultado->return);$i++){
                     ?>
                     <div class="jumbotron">
                         <div class="form-group">
                             <label>Id</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->id ?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->id ?>>
                             <label>Rut</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->rut ?>>
-                            <label>IP</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->ip ?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->rut ?>>
                             <label>Accion</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->accion." ".$resultado->return[$i]->accion?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->mensaje?>>
                             <label>Fecha</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->fecha ?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->fecha ?>>
                         </div>
                     </div>
                 <?php
-                    }
                 }
                 ?>
             </div>

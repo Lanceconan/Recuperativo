@@ -31,7 +31,7 @@
                     </li>
 
                     <li>
-        	           <a  href="index.php"><i class="fa fa-home fa-3x"></i> Inicio</a>
+                        <a  href="index.php"><i class="fa fa-home fa-3x"></i> Inicio</a>
                     </li>
 
                     <li>
@@ -43,11 +43,11 @@
                     </li>
 
                     <li>
-                        <a  href="#"><i class="fa fa-bars fa-3x"></i> Mensaje por RUT </a>
+                        <a  href="consultaMensaje.php"><i class="fa fa-bars fa-3x"></i> Mensaje por RUT </a>
                     </li>  
 
                     <li>
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Mensajes por RUT </a>
+                        <a  href="consultaMensajes.php"><i class="fa fa-bar-chart-o fa-3x"></i> Mensajes por RUT </a>
                     </li>
 
                     <li>
