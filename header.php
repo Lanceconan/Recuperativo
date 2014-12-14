@@ -39,7 +39,7 @@
                     </li>
 
                     <li>
-                        <a href="#" ><i class="fa fa-edit fa-3x"></i> Accesos por RUT </a>
+                        <a href="consulta.php" ><i class="fa fa-edit fa-3x"></i> Accesos por RUT </a>
                     </li>
 
                     <li>

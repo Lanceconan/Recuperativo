@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tarea 7 de Ingenier&iacutea de Software</title>
-    </head>
-    <body>
-	
-	<form method="post" action="index.php"> 
-		<br> 
-		<input type="submit" value="Volver"> 
-		<br>
-	</form>
+<?php include("header.php"); ?>
 
-        <form method="post" action="investigar.php">
-        <table>
-        	<tr>
-                    <td><label>Inserte el rut para buscar si registra acceso(s).</label></td>
-                    <td><input type="text" name="rut" required></input></td>
-                    <td></td>
-                    <td><input type="submit"></input></td>
-            </tr>        
-        </table>
-        </form>
-    </body>
-</html>
+<div id="page-wrapper" >            
+    <div id="page-inner">     
+        <div class="row">                
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <center>
+                    <h1>Consulte los Mensajes segun un RUT</h1>                  
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="row">      
+        <center>
+        <div class="col-md-12 col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Mensajes
+                </div>
+                <div class="panel-body">                     
+                    <form method="post" action="investigar.php">               
+                                                
+                        <label>Inserte el rut para buscar si registra acceso(s). </label> <br><br>
+                        <input type="text" name="rut" required></input>                        
+                        <br><br><br>
+                        <input type="submit" value="Consultar" class="btn btn-success btn-lg"></input>
+                        <input class="btn btn-danger btn-lg" type="reset" value="Borrar">                                
+                    </form>
+                                        
+                </div>
+                <div class="panel-footer">
+                    ISW - UTEM 2014
+                </div>
+            </div>
+        </div>
+        </center>
+        </div>        
+</div>
+
+<?php include("footer.php"); ?>
