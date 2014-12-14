@@ -35,11 +35,11 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-search fa-3x"></i> Accesos </a>
+                        <a href="accesos.php"><i class="fa fa-search fa-3x"></i> Accesos </a>
                     </li>
 
                     <li>
-                        <a href="consulta.php" ><i class="fa fa-edit fa-3x"></i> Accesos por RUT </a>
+                        <a href="consultaporrut.php" ><i class="fa fa-edit fa-3x"></i> Accesos por RUT </a>
                     </li>
 
                     <li>
@@ -51,7 +51,7 @@
                     </li>
 
                     <li>
-                        <a href="mandar.php"><i class="fa fa-folder-open fa-3x"></i> Guardar Mensaje </a>
+                        <a href="mandar_mensaje.php"><i class="fa fa-folder-open fa-3x"></i> Guardar Mensaje </a>
                     </li>
 
                     <li>
