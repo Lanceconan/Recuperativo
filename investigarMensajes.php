@@ -6,11 +6,11 @@
             <div class="col-md-12">
                 <div class="jumbotron">
                     <center>
-                        <h1>Mensajes Encontrados</h1> 
+                    	<h1>Mensajes Encontrados</h1> 
                     </center>                    
                     
                     <p>
-                         <?php
+                        <?php
                             //require_once('lib/nusoap.php');
                             $wsdl = "http://sebastian.cl/isw-ws/wsISW?wsdl";
 
@@ -23,9 +23,7 @@
                             //($resultado);
                             //echo "</pre>"; 
                         ?>
-                    </p>                    
-                </div>
-                <?php                
+                       <?php                
                 if($resultado->estadoSalida->codigo==-1){
                     ?>
                     <div class="jumbotron">
@@ -34,7 +32,7 @@
                     <?php
                 }else{
                     $largo = count($resultado->return);
-                    for($i=0;$i<count($resultado->return);$i++){
+                    for($i=0;$i<$largo;$i++){
                     ?>
                     <div class="jumbotron">
                         <div class="form-group">
@@ -43,7 +41,7 @@
                             <label>Rut</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->rut ?>>
                             <label>Mensaje</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->mensaje." ".$resultado->return[$i]->accion?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->mensaje ?>>
                             <label>Fecha</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->fecha ?>>
                         </div>
@@ -52,6 +50,8 @@
                     }
                 }
                 ?>
+                    </p>                    
+                </div>
             </div>
         </div>          
     </div>

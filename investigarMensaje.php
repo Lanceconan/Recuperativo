@@ -26,8 +26,7 @@
                              * 
                              */
                         ?>
-                    </p>                    
-                </div>
+                    </p>
                 <?php                
                 if($resultado->estadoSalida->codigo==-1){
                     ?>
@@ -44,7 +43,7 @@
                             <label>Rut</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->rut ?>>
                             <label>Mensaje</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->mensaje?>>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->mensaje ?>>
                             <label>Fecha</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->fecha ?>>
                         </div>
@@ -52,6 +51,7 @@
                 <?php
                 }
                 ?>
+                </div>
             </div>
         </div>          
     </div>

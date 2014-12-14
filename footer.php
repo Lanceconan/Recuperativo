@@ -15,6 +15,9 @@
 	<!-- CUSTOM SCRIPTS -->
     <script src="js/custom.js"></script>
     
+    <script src="js/jquery.Rut.min.js"></script>
    
+    <script src="js/validaciones.js"></script>
+    
 </body>
 </html>

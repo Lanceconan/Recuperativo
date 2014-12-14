@@ -22,7 +22,7 @@
                     <form method="post" action="investigarMensajes.php">               
                                                 
                         <label>Inserte el rut para buscar si registra acceso(s)</label> <br><br>
-                        <input type="text" name="rut" required></input>                        
+                        <input  id="rut" type="text" name="rut" required onkeypress="return validatext(event,'6')"></input>                        
                         <br><br><br>
                         <input type="submit" value="Consultar" class="btn btn-success btn-lg"></input>
                         <input class="btn btn-danger btn-lg" type="reset" value="Borrar">                                

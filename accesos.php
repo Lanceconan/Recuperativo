@@ -26,7 +26,7 @@
                              */
                         ?>
                     </p>                    
-                </div>
+                
                 <?php                
                 if($resultado->estadoSalida->codigo==-1){
                     ?>
@@ -56,6 +56,7 @@
                     }
                 }
                 ?>
+                </div>
             </div>
         </div>          
     </div>

@@ -23,7 +23,7 @@
                         <form method="post" action="guardar_mensaje.php">                            
                                                     
                             <label>RUT: </label> <br>
-                            <input type="text" name="rut" required></input>
+                            <input  id="rut" type="text" name="rut" required></input>
                             <br><br>
                             <label>Escriba un mensaje: </label><br>
                             <input type="text" name="message" required></input>
