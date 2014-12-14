@@ -51,7 +51,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-folder-open fa-3x"></i> Guardar Mensaje </a>
+                        <a href="mandar.php"><i class="fa fa-folder-open fa-3x"></i> Guardar Mensaje </a>
                     </li>
 
                     <li>
