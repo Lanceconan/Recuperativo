@@ -47,7 +47,7 @@
                     </li>  
 
                     <li>
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Mensaje por RUT </a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Mensajes por RUT </a>
                     </li>
 
                     <li>
