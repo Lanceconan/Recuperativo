@@ -45,10 +45,8 @@
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->id ?>>
                             <label>Rut</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->rut ?>>
-                            <label>IP</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->ip ?>>
-                            <label>Accion</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->accion." ".$resultado->return[$i]->accion?>>
+                            <label>Mensaje</label>
+                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->mensaje." ".$resultado->return[$i]->accion?>>
                             <label>Fecha</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->fecha ?>>
                         </div>

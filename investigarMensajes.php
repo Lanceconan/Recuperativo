@@ -6,11 +6,11 @@
             <div class="col-md-12">
                 <div class="jumbotron">
                     <center>
-                    	<h1>Mensajes Encontrados</h1> 
+                        <h1>Mensajes Encontrados</h1> 
                     </center>                    
                     
                     <p>
-                        <?php
+                         <?php
                             //require_once('lib/nusoap.php');
                             $wsdl = "http://sebastian.cl/isw-ws/wsISW?wsdl";
 
@@ -23,7 +23,9 @@
                             //($resultado);
                             //echo "</pre>"; 
                         ?>
-                       <?php                
+                    </p>                    
+                </div>
+                <?php                
                 if($resultado->estadoSalida->codigo==-1){
                     ?>
                     <div class="jumbotron">
@@ -32,7 +34,7 @@
                     <?php
                 }else{
                     $largo = count($resultado->return);
-                    for($i=0;$i<$largo;$i++){
+                    for($i=0;$i<count($resultado->return);$i++){
                     ?>
                     <div class="jumbotron">
                         <div class="form-group">
@@ -50,8 +52,6 @@
                     }
                 }
                 ?>
-                    </p>                    
-                </div>
             </div>
         </div>          
     </div>
