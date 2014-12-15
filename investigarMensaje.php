@@ -43,7 +43,7 @@
                             <label>Rut</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->rut ?>>
                             <label>Mensaje</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->mensaje ?>>
+                            <TEXTAREA class="form-control" type="text" readonly="true"> <?php echo $resultado->return->mensaje ?></TEXTAREA>
                             <label>Fecha</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return->fecha ?>>
                         </div>

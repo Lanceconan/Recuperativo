@@ -19,9 +19,6 @@
                             $cliente = new SoapClient($wsdl);
                             $resultado = $cliente->getMensajesPorRut($parametro);
 
-                          // echo "<pre>";
-                            //($resultado);
-                            //echo "</pre>"; 
                         ?>
                        <?php                
                 if($resultado->estadoSalida->codigo==-1){
@@ -40,9 +37,8 @@
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->id ?>>
                             <label>Rut</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->rut ?>>
-                            <label>Mensaje</label>
-                            <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->mensaje ?>>
-                            <label>Fecha</label>
+                             <label>Mensaje</label>
+                            <TEXTAREA class="form-control" type="text" readonly="true"> <?php echo $resultado->return[$i]->mensaje ?></TEXTAREA>                            <label>Fecha</label>
                             <input class="form-control" type="text" readonly="true" value=<?php echo $resultado->return[$i]->fecha ?>>
                         </div>
                     </div>
